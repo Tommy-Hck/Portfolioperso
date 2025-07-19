@@ -1,6 +1,20 @@
+body {
+    margin: 10px;
+    background-color: #333;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    vertical-align: center;
+}
+.portrait {
+    width: 15%;
+    border-radius: 5%;
+}
 .shine {
     position: relative;
     display: inline-block;
+    overflow: hidden;
 }
 
 .shine::after {
@@ -13,8 +27,8 @@
        background: linear-gradient(
         90deg,
         transparent,
+        rgba(255, 255, 255, 0.8) 20%,
         rgba(255, 255, 255, 0.8) 40%,
-        rgba(255, 255, 255, 0.8) 60%,
         transparent
     );
     animation: shineAfterEffect 4s ease-in-out infinite;
@@ -23,4 +37,9 @@
 @keyframes shineAfterEffect {
     0% { left:-100%; }
     100% { left:+110%; }
+}
+
+#name {
+    color: #e65c0d;
+    width: fit-content;
 }
